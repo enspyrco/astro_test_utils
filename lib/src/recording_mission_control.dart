@@ -1,7 +1,8 @@
-import 'package:astro/astro.dart';
-import 'package:astro_test_utils/src/system-checks/record_missions.dart';
+import 'package:astro_core/astro_core.dart';
 import 'package:astro_types/core_types.dart';
 import 'package:astro_types/state_types.dart';
+
+import 'system-checks/record_missions.dart';
 
 class RecordingMissionControl<T extends AstroState>
     implements MissionControl<T> {

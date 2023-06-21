@@ -1,9 +1,23 @@
 dependency_overrides:
-  astro:
-    path: ../astro
+  astro_core:
+    git: https://github.com/enspyrco/astro_core
   astro_types:
-    path: ../../../flutter/utils/astro_types
+    git: https://github.com/enspyrco/astro_types
   astro_locator:
-    path: ../../../dart/utils/astro_locator
+    git: https://github.com/enspyrco/astro_locator
   astro_generators:
-    path: ../../../flutter/utils/astro_generators
+    git: https://github.com/enspyrco/astro_generators
+  astro_error_handling:
+    git: https://github.com/enspyrco/astro_error_handling
+  enspyr_lints:
+    git: https://github.com/enspyrco/enspyr_lints
+
+# dependency_overrides:
+#   astro:
+#     git: ../astro
+#   astro_types:
+#     git: ../../../flutter/utils/astro_types
+#   astro_locator:
+#     git: ../../../dart/utils/astro_locator
+#   astro_generators:
+#     git: ../../../flutter/utils/astro_generators
