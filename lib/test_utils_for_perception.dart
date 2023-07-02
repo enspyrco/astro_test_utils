@@ -1,4 +1,4 @@
-library astro_test_utils;
+library test_utils_for_perception;
 
 export 'src/recording_mission_control.dart';
 export 'src/widget_test_harness.dart';

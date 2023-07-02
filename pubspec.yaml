@@ -1,4 +1,4 @@
-name: astro_test_utils
+name: test_utils_for_perception
 description: Helper classes for testing apps that use astro.
 version: 0.0.0-a1
 publish_to: none

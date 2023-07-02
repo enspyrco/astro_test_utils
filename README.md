@@ -1,6 +1,6 @@
-# astro_test_utils
+# test_utils_for_perception
 
-*Helper classes for testing apps that use astro packages.*
+*Helper classes for testing apps that use perception packages.*
 
 Basic usage:
 
@@ -31,8 +31,8 @@ A TestHarness that wraps a widget under test in a StoreProvider.
 
 ### App State Test Doubles
 
-Currently we (as users of astro_test_utils) create AppState test doubles
-in our apps, as the AppState type is not known to astro_test_utils.
+Currently we (as users of test_utils_for_perception) create AppState test doubles
+in our apps, as the AppState type is not known to test_utils_for_perception.
 
 So, to provide the tests with an AppState that uses test double for its members,
 we add a file, eg. `test/test-doubles/state/app_state_test_doubles.dart`:
@@ -59,7 +59,7 @@ This will probably be replaced with a source gen solution in the future.
 
 ## Stubbing vs. Mocking
 
-The astro_test_utils package provides classes for stubbing services but nothing in the way of mocks.
+The test_utils_for_perception package provides classes for stubbing services but nothing in the way of mocks.
 You can always use Mockito or the like yourself but consider whether stubs might suffice and (perhaps
 controversial) whether to avoid mocks in general.
 
