@@ -10,13 +10,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  astro_core: ^0.0.0-a1
-  astro_types: ^0.0.0-a1
-  astro_locator: ^0.0.0-a1
+  
   flutter_test:
     sdk: flutter
+  
+  core_of_perception: ^0.0.0-a1
+  locator_for_perception: ^0.0.0-a1
+  types_for_perception: ^0.0.0-a1
 
 dev_dependencies:
   enspyr_lints: ^0.0.0-a1
   build_runner: ^2.4.5
-  astro_generators: ^0.0.0-a1
+  builders_for_perception: ^0.0.0-a1

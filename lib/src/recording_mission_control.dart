@@ -1,6 +1,6 @@
-import 'package:astro_core/astro_core.dart';
-import 'package:astro_types/core_types.dart';
-import 'package:astro_types/state_types.dart';
+import 'package:core_of_perception/core_of_perception.dart';
+import 'package:types_for_perception/core_types.dart';
+import 'package:types_for_perception/state_types.dart';
 
 import 'system-checks/record_missions.dart';
 
