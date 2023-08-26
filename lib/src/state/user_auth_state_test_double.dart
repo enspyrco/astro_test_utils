@@ -1,10 +1,4 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
-
-part of 'user_auth_state.dart';
-
-// **************************************************************************
-// StateImplementationGenerator
-// **************************************************************************
+import 'package:types_for_auth/types_for_auth.dart';
 
 class UserAuthStateTestDouble implements UserAuthState {
   UserAuthStateTestDouble({

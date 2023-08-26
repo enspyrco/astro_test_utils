@@ -1,8 +1,7 @@
 import 'package:core_of_perception/core_of_perception.dart';
 import 'package:locator_for_perception/locator_for_perception.dart';
-import 'package:types_for_perception/core_types.dart';
-import 'package:types_for_perception/state_types.dart';
 import 'package:flutter/material.dart';
+import 'package:types_for_perception/beliefs.dart';
 
 import 'system-checks/record_missions.dart';
 
@@ -21,7 +20,7 @@ import 'system-checks/record_missions.dart';
 ///
 /// The harness exposes [MissionControl.stream] so tests can observe started
 /// missions and any associated state change.
-class WidgetTestHarness<T extends AstroState> {
+class WidgetTestHarness<T extends CoreBeliefs> {
   WidgetTestHarness({
     required T initialState,
     required Widget innerWidget,

@@ -1,9 +1,8 @@
-import 'package:types_for_perception/core_types.dart';
-import 'package:types_for_perception/state_types.dart';
+import 'package:types_for_perception/beliefs.dart';
 
 import '../state/mission_report.dart';
 
-class RecordMissionReports<T extends AstroState> extends SystemCheck<T> {
+class RecordMissionReports<T extends CoreBeliefs> extends SystemCheck<T> {
   final List<MissionReport> updates = [];
   final Map<Mission, T> stateForMission = {};
 

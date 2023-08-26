@@ -1,10 +1,9 @@
 import 'package:core_of_perception/core_of_perception.dart';
-import 'package:types_for_perception/core_types.dart';
-import 'package:types_for_perception/state_types.dart';
+import 'package:types_for_perception/beliefs.dart';
 
 import 'system-checks/record_missions.dart';
 
-class RecordingMissionControl<T extends AstroState>
+class RecordingMissionControl<T extends CoreBeliefs>
     implements MissionControl<T> {
   RecordingMissionControl({required T state}) {
     _missionControl = DefaultMissionControl<T>(
