@@ -1,7 +1,7 @@
-import 'package:types_for_perception/beliefs.dart';
+import 'package:abstractions/beliefs.dart';
 
 class MissionReport<T extends CoreBeliefs> {
   MissionReport(this.mission, this.state);
-  final Mission mission;
+  final Cognition mission;
   final T state;
 }

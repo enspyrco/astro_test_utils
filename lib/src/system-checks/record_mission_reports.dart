@@ -1,16 +1,16 @@
-import 'package:types_for_perception/beliefs.dart';
+import 'package:abstractions/beliefs.dart';
 
 import '../state/mission_report.dart';
 
-class RecordMissionReports<T extends CoreBeliefs> extends SystemCheck<T> {
+class RecordMissionReports<T extends CoreBeliefs> extends Habit<T> {
   final List<MissionReport> updates = [];
-  final Map<Mission, T> stateForMission = {};
+  final Map<Cognition, T> stateForMission = {};
 
   @override
-  void call(MissionControl<T> missionControl, Mission mission) async {
-    updates.add(MissionReport(mission, missionControl.state));
-    stateForMission[mission] = missionControl.state;
+  void call(BeliefSystem<T> beliefSystem, Cognition mission) async {
+    updates.add(MissionReport(mission, beliefSystem.state));
+    stateForMission[mission] = beliefSystem.state;
   }
 
-  bool includes(Mission mission) => stateForMission[mission] != null;
+  bool includes(Cognition mission) => stateForMission[mission] != null;
 }

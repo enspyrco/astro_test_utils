@@ -1,6 +1,7 @@
+import 'package:abstractions/beliefs.dart';
 import 'package:types_for_auth/types_for_auth.dart';
 
-class UserAuthStateTestDouble implements UserAuthState {
+class UserAuthStateTestDouble implements UserAuthState, CoreBeliefs {
   UserAuthStateTestDouble({
     required this.signedIn,
     this.uid,

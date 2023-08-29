@@ -1,7 +1,7 @@
 import 'package:types_for_auth/types_for_auth.dart';
-import 'package:types_for_perception/auth_beliefs.dart';
+import 'package:abstractions/identity.dart';
 
-class AuthBeliefsTestDouble implements AuthBeliefs {
+class AuthBeliefsTestDouble implements IdentityBeliefs {
   AuthBeliefsTestDouble({
     required this.user,
   });
