@@ -29,5 +29,5 @@ class RecordingBeliefSystem<T extends CoreBeliefs> implements BeliefSystem<T> {
   Stream<T> get onBeliefUpdate => _beliefSystem.onBeliefUpdate;
 
   @override
-  T get state => _beliefSystem.state;
+  T get beliefs => _beliefSystem.beliefs;
 }

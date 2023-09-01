@@ -43,7 +43,7 @@ class WidgetTestHarness<T extends CoreBeliefs> {
 
   Widget get widget => MaterialApp(home: Scaffold(body: _widgetUnderTest));
 
-  T get state => _beliefSystem.state;
+  T get state => _beliefSystem.beliefs;
 
   List<Cognition> get recordedMissions => _recordMissions.missions;
 

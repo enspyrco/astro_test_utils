@@ -8,8 +8,8 @@ class RecordMissionReports<T extends CoreBeliefs> extends Habit<T> {
 
   @override
   void call(BeliefSystem<T> beliefSystem, Cognition mission) async {
-    updates.add(MissionReport(mission, beliefSystem.state));
-    stateForMission[mission] = beliefSystem.state;
+    updates.add(MissionReport(mission, beliefSystem.beliefs));
+    stateForMission[mission] = beliefSystem.beliefs;
   }
 
   bool includes(Cognition mission) => stateForMission[mission] != null;
