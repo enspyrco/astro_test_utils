@@ -1,8 +1,8 @@
 import 'package:types_for_auth/types_for_auth.dart';
 import 'package:abstractions/identity.dart';
 
-class AuthBeliefsTestDouble implements IdentityBeliefs {
-  AuthBeliefsTestDouble({
+class IdentityBeliefsTestDouble implements IdentityBeliefs {
+  IdentityBeliefsTestDouble({
     required this.user,
   });
 
@@ -10,10 +10,10 @@ class AuthBeliefsTestDouble implements IdentityBeliefs {
   final UserAuthState user;
 
   @override
-  AuthBeliefsTestDouble copyWith({
+  IdentityBeliefsTestDouble copyWith({
     UserAuthState? user,
   }) =>
-      AuthBeliefsTestDouble(
+      IdentityBeliefsTestDouble(
         user: user ?? this.user,
       );
 
@@ -30,5 +30,5 @@ class AuthBeliefsTestDouble implements IdentityBeliefs {
 
   @override
   bool operator ==(Object other) =>
-      other is AuthBeliefsTestDouble && user == other.user;
+      other is IdentityBeliefsTestDouble && user == other.user;
 }

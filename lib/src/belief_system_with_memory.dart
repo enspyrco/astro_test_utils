@@ -1,22 +1,23 @@
 import 'package:percepts/percepts.dart';
 import 'package:abstractions/beliefs.dart';
 
-import 'system-checks/record_missions.dart';
+import 'habits/record_cognition_habit.dart';
 
-class RecordingBeliefSystem<T extends CoreBeliefs> implements BeliefSystem<T> {
-  RecordingBeliefSystem({required T state}) {
+class BeliefSystemWithMemory<T extends CoreBeliefs> implements BeliefSystem<T> {
+  BeliefSystemWithMemory({required T state}) {
     _beliefSystem = DefaultBeliefSystem<T>(
-        state: state,
-        systemChecks: DefaultHabits()
-          ..preConsideration.add(_missionRecorder)
-          ..postConclusion.add(_missionRecorder));
+      beliefs: state,
+      habits: DefaultHabits()
+        ..preConsideration.add(_cognitionRecorder)
+        ..postConclusion.add(_cognitionRecorder),
+    );
   }
 
   late final BeliefSystem<T> _beliefSystem;
-  final RecordMissions<T> _missionRecorder = RecordMissions<T>();
+  final RecordCognitionHabit<T> _cognitionRecorder = RecordCognitionHabit<T>();
 
   bool recorded(Cognition mission) =>
-      _missionRecorder.missions.contains(mission);
+      _cognitionRecorder.cognitions.contains(mission);
 
   @override
   void conclude(Conclusion<T> mission) => _beliefSystem.conclude(mission);
