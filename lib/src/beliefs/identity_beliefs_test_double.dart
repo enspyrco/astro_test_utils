@@ -1,34 +1,44 @@
-import 'package:types_for_auth/types_for_auth.dart';
-import 'package:abstractions/identity.dart';
+// import 'package:abstractions/identity.dart';
 
-class IdentityBeliefsTestDouble implements IdentityBeliefs {
-  IdentityBeliefsTestDouble({
-    required this.user,
-  });
+// import '../../test_utils_for_perception.dart';
 
-  @override
-  final UserAuthState user;
+// class IdentityBeliefsTestDouble implements IdentityBeliefs {
+//   IdentityBeliefsTestDouble({
+//     required this.credentials,
+//     required this.userAuthState,
+//   });
 
-  @override
-  IdentityBeliefsTestDouble copyWith({
-    UserAuthState? user,
-  }) =>
-      IdentityBeliefsTestDouble(
-        user: user ?? this.user,
-      );
+//   @override
+//   final Map<IdentityProvider, String> credentials;
+//   @override
+//   final UserAuthStateTestDouble userAuthState;
 
-  @override
-  Map<String, Object?> toJson() => {
-        'user': user,
-      };
+//   @override
+//   IdentityBeliefsTestDouble copyWith({
+//     Map<IdentityProvider, String>? credentials,
+//     UserAuthStateTestDouble? userAuthState,
+//   }) =>
+//       IdentityBeliefsTestDouble(
+//         credentials: credentials ?? this.credentials,
+//         userAuthState: userAuthState ?? this.userAuthState,
+//       );
 
-  @override
-  String toString() => 'user: $user, ';
+//   @override
+//   Map<String, Object?> toJson() => {
+//         'credentials': credentials,
+//         'userAuthState': userAuthState.toJson(),
+//       };
 
-  @override
-  int get hashCode => user.hashCode;
+//   @override
+//   String toString() =>
+//       'userAuthState: $userAuthState, credentials: $credentials';
 
-  @override
-  bool operator ==(Object other) =>
-      other is IdentityBeliefsTestDouble && user == other.user;
-}
+//   @override
+//   int get hashCode => Object.hash(credentials, userAuthState);
+
+//   @override
+//   bool operator ==(Object other) =>
+//       other is IdentityBeliefsTestDouble &&
+//       credentials == other.credentials &&
+//       userAuthState == other.userAuthState;
+// }
