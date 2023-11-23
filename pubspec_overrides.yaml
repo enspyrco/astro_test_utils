@@ -6,8 +6,6 @@ dependency_overrides:
     path: ../abstractions
   locator_for_perception:
     path: ../locator_for_perception
-  builders_for_perception:
-    path: ../builders_for_perception
   error_correction_in_perception:
     path: ../error_correction_in_perception
   
